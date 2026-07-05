@@ -33,7 +33,10 @@ No closed-form solution exists due to the coupling of the PDE with these nonline
 
 ### Constant Volatility
 - Recombining binomial tree with up/down factors $u = e^{\sigma\sqrt{\Delta t}}$, $d = 1/u$
-- Backward induction with early exercise: $V^*_{i,j} = \max(V_{i,j},\, K - S_{i,j})$
+- Backward induction with early exercise:
+
+$$V^*_{i,j} = \max(V_{i,j},\, K - S_{i,j})$$
+
 - Free boundary located by bracketing the transition between continuation and exercise regions
 - Linear interpolation to refine $S_f(t_j)$ between adjacent nodes
 - Iterative adjustment of $S_0$ until convergence: $|V_{0,0} - \max(K-S_0,0)| < \varepsilon$

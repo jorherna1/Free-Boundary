@@ -46,7 +46,7 @@ $$\sigma_{i,j}^2 = \omega_{i,j} + \beta_{i,j}\,\sigma_{\lfloor i/2\rfloor,\,j-1}
 
 - Stock price evolution at each node:
 
-$$S_{i,j} = S_{\lfloor i/2\rfloor,\,j-1}\cdot e^{\,\mu\Delta t\,+\,(-1)^i\,\sigma_{\lfloor i/2\rfloor,\,j-1}\sqrt{252}\sqrt{\Delta t}}$$
+$$S_{i,j} = S_{\lfloor i/2 \rfloor, j-1} \cdot e^{\mu \Delta t + (-1)^i \sigma_{\lfloor i/2 \rfloor, j-1} \sqrt{252 \Delta t}}$$
 
 - After recalibration, the historical dataset is restored to prevent forward contamination across paths
 - Risk-neutral probabilities are node-specific: $p_{i,j} = \frac{e^{r\Delta t} - d_{i,j}}{u_{i,j} - d_{i,j}}$

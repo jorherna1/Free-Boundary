@@ -45,11 +45,11 @@ $$V^*_{i,j} = \max(V_{i,j},\, K - S_{i,j})$$
 - Non-recombining binomial tree — each path is distinct
 - GARCH(1,1) recalibrated locally at each node using only the price history of the unique path leading to it:
 
-$$\sigma_{i,j}^2 = \omega_{i,j} + \beta_{i,j}\,\sigma_{\lfloor i/2\rfloor,\,j-1}^2 + \alpha_{i,j}\left(\frac{S_{i,j} - S_{\lfloor i/2\rfloor,\,j-1}}{S_{\lfloor i/2\rfloor,\,j-1}}\right)^2$$
+$$\sigma_{i,j}^2 = \omega_{i,j} + \beta_{i,j}\,\sigma_{\lfloor i/2 \rfloor,\,j-1}^2 + \alpha_{i,j}\left(\frac{S_{i,j} - S_{\lfloor i/2 \rfloor,\,j-1}}{S_{\lfloor i/2 \rfloor,\,j-1}}\right)^2$$
 
 - Stock price evolution at each node:
 
-$$S_{i,j} = S_{\lfloor i/2\rfloor,\,j-1}\,\exp\!\left(\mu\Delta t + (-1)^i\,\sigma_{\lfloor i/2\rfloor,\,j-1}\sqrt{252}\sqrt{\Delta t}\right)$$
+$$S_{i,j} = S_{\lfloor i/2 \rfloor,\,j-1}\,\exp\left(\mu\Delta t + (-1)^i\,\sigma_{\lfloor i/2 \rfloor,\,j-1}\sqrt{252}\sqrt{\Delta t}\right)$$
 
 - After recalibration, the historical dataset is restored to prevent forward contamination across paths
 - Risk-neutral probabilities are node-specific: $p_{i,j} = \frac{e^{r\Delta t} - d_{i,j}}{u_{i,j} - d_{i,j}}$

@@ -54,7 +54,7 @@ $$S_{i,j} = S_{\lfloor i/2 \rfloor, j-1} \cdot e^{\mu \Delta t + (-1)^i \sigma_{
 ### Continuous-Time Limit
 The paper also derives the continuous-time SDE limit of the GARCH(1,1) process via Itô's formula:
 
-$$d(\sigma_t^2) = \bar\gamma\,[\Gamma_L - \sigma_t^2]\cdot 252\,dt + \bar\alpha\sqrt{2}\sqrt{252}\,\sigma_t^2\,dW_t$$
+$$d(\sigma_t^2) = \bar{\gamma}[\Gamma_L - \sigma_t^2] \cdot 252 \, dt + \bar{\alpha} \sqrt{2 \cdot 252} \, \sigma_t^2 \, dW_t$$
 
 where $\Gamma_L$ is the long-run variance and $\bar\gamma = 1 - \bar\alpha - \bar\beta$. This confirms the discrete updates converge to a mean-reverting diffusion in continuous time.
 
